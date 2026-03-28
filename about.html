@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About – Brazendragonj Ram Chandra High School</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .about-img { width: 100%; height: 300px; background: linear-gradient(135deg, var(--navy), #1a6b3c); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 8rem; }
+    .info-box { background: var(--white); border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+    .info-row { display: flex; justify-content: space-between; padding: 0.7rem 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+    .info-row:last-child { border-bottom: none; }
+    .info-row span:first-child { color: var(--gray); }
+    .info-row span:last-child { font-weight: 600; color: var(--navy); }
+    .mission-card { padding: 2rem; border-radius: 8px; border-top: 4px solid var(--gold); }
+    .mission-card h3 { font-family: 'Libre Baskerville', serif; font-size: 1.2rem; color: var(--navy); margin-bottom: 0.8rem; }
+    .mission-card p { color: var(--gray); line-height: 1.8; font-size: 0.92rem; }
+    .principal-card { display: flex; gap: 1.5rem; align-items: center; background: var(--white); border-radius: 8px; padding: 2rem; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+    .principal-avatar { width: 90px; height: 90px; background: linear-gradient(135deg, var(--navy), #2d5a9e); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; flex-shrink: 0; }
+    .principal-info h3 { font-family: 'Libre Baskerville', serif; font-size: 1.2rem; color: var(--navy); }
+    .principal-info p { color: var(--gold); font-size: 0.85rem; font-weight: 600; margin: 0.3rem 0; }
+    .principal-info blockquote { color: var(--gray); font-size: 0.88rem; line-height: 1.7; font-style: italic; border-left: 3px solid var(--gold); padding-left: 1rem; margin-top: 0.8rem; }
+    @media (max-width: 700px) { .about-grid { grid-template-columns: 1fr; } .principal-card { flex-direction: column; text-align: center; } }
+  </style>
+</head>
+<body>
+  <div id="site-header"></div>
+  <div class="page-hero">
+    <div class="breadcrumb"><a href="index.html">Home</a> › About</div>
+    <h2>About Our School</h2>
+    <p>Our history, mission, and vision since 1938</p>
+  </div>
+
+  <div class="section">
+    <div class="about-grid">
+      <div>
+        <div class="about-img">🏫</div>
+        <div style="margin-top:1.5rem;">
+          <h2 class="section-title">Our History</h2>
+          <div class="section-line"></div>
+          <p style="color:var(--gray); line-height:1.8; font-size:0.95rem; margin-bottom:1rem;">
+            Brazendragonj Ram Chandra High School was founded in 1938 by a group of visionary community leaders who believed in the power of education to transform lives in the Derai region of Sunamganj.
+          </p>
+          <p style="color:var(--gray); line-height:1.8; font-size:0.95rem; margin-bottom:1rem;">
+            For over 85 years, we have been a beacon of learning in the haor belt of Sunamganj district, producing thousands of graduates who have gone on to serve in every field of national life — from civil service and medicine to education and business.
+          </p>
+          <p style="color:var(--gray); line-height:1.8; font-size:0.95rem;">
+            Today, the school proudly serves over 800 students from Class VI to Class X, maintaining its founding commitment to quality education, moral character, and community development.
+          </p>
+        </div>
+      </div>
+      <div>
+        <h2 class="section-title">School Information</h2>
+        <div class="section-line"></div>
+        <div class="info-box">
+          <div class="info-row"><span>School Name</span><span>Brazendragonj Ram Chandra High School</span></div>
+          <div class="info-row"><span>Established</span><span>1938</span></div>
+          <div class="info-row"><span>Location</span><span>Shamarchar Bazar, Derai, Sunamganj</span></div>
+          <div class="info-row"><span>Classes</span><span>Class VI – Class X</span></div>
+          <div class="info-row"><span>Medium</span><span>Bengali</span></div>
+          <div class="info-row"><span>Board</span><span>Sylhet Education Board</span></div>
+          <div class="info-row"><span>Type</span><span>Co-Education</span></div>
+          <div class="info-row"><span>Total Students</span><span>800+</span></div>
+          <div class="info-row"><span>Total Teachers</span><span>35+</span></div>
+          <div class="info-row"><span>EIIN Number</span><span>123456</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-alt">
+    <h2 class="section-title">Mission & Vision</h2>
+    <div class="section-line"></div>
+    <div class="grid-3">
+      <div class="card mission-card">
+        <h3>🎯 Our Mission</h3>
+        <p>To provide quality secondary education that develops academic excellence, strong moral values, and a love of learning in every student from Classes VI to X.</p>
+      </div>
+      <div class="card mission-card" style="border-top-color: var(--green)">
+        <h3>🔭 Our Vision</h3>
+        <p>To be the leading educational institution in Sunamganj district, empowering students to become responsible, educated citizens who contribute meaningfully to society.</p>
+      </div>
+      <div class="card mission-card" style="border-top-color: var(--navy)">
+        <h3>💡 Our Values</h3>
+        <p>Integrity, discipline, respect, and academic excellence guide everything we do. We believe every student has unique potential waiting to be discovered.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Message from the Principal</h2>
+    <div class="section-line"></div>
+    <div class="principal-card">
+      <div class="principal-avatar">👨‍💼</div>
+      <div class="principal-info">
+        <h3>Md. Abdur Rahman</h3>
+        <p>Principal, Brazendragonj Ram Chandra High School</p>
+        <blockquote>
+          "Our school has stood for over 85 years as a place of learning, growth, and opportunity. We are committed to nurturing not just academic excellence but also the character and values that make great human beings. I warmly welcome all students and families to be part of our proud tradition."
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="components.js"></script>
+</body>
+</html>
