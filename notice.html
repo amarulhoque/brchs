@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notice – Brazendragonj Ram Chandra High School</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .notice-full { background: var(--white); border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); margin-bottom: 1.2rem; overflow: hidden; transition: transform 0.2s; }
+    .notice-full:hover { transform: translateX(4px); }
+    .notice-full-header { display: flex; align-items: center; gap: 1rem; padding: 1.2rem 1.5rem; border-bottom: 1px solid var(--border); }
+    .notice-icon { width: 45px; height: 45px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+    .icon-red { background: rgba(192,57,43,0.1); }
+    .icon-gold { background: rgba(200,151,42,0.1); }
+    .icon-green { background: rgba(26,107,60,0.1); }
+    .icon-blue { background: rgba(26,46,82,0.1); }
+    .notice-full-header h4 { font-family: 'Libre Baskerville', serif; font-size: 1rem; color: var(--navy); }
+    .notice-full-header .meta { font-size: 0.8rem; color: var(--gray); margin-top: 0.2rem; }
+    .notice-full-body { padding: 1rem 1.5rem; font-size: 0.88rem; color: var(--gray); line-height: 1.7; }
+    .filter-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .filter-btn { padding: 0.4rem 1rem; border: 1px solid var(--border); border-radius: 50px; background: none; font-size: 0.82rem; cursor: pointer; transition: all 0.2s; font-family: 'Source Sans 3', sans-serif; }
+    .filter-btn.active, .filter-btn:hover { background: var(--navy); color: var(--white); border-color: var(--navy); }
+  </style>
+</head>
+<body>
+  <div id="site-header"></div>
+  <div class="page-hero">
+    <div class="breadcrumb"><a href="index.html">Home</a> › Notice</div>
+    <h2>Notice Board</h2>
+    <p>Latest announcements and important notices</p>
+  </div>
+
+  <div class="section">
+    <div class="filter-bar">
+      <button class="filter-btn active">All</button>
+      <button class="filter-btn">Exam</button>
+      <button class="filter-btn">Admission</button>
+      <button class="filter-btn">Event</button>
+      <button class="filter-btn">Holiday</button>
+    </div>
+
+    <div class="notice-full">
+      <div class="notice-full-header">
+        <div class="notice-icon icon-red">📋</div>
+        <div><h4>SSC Form Fill-up 2026 – Deadline Extended</h4><div class="meta"><span class="badge badge-red">Exam</span> &nbsp; January 2, 2026 &nbsp;|&nbsp; By: Principal</div></div>
+      </div>
+      <div class="notice-full-body">Class X students must complete SSC board form fill-up by January 15, 2026. Students who miss the deadline will NOT be allowed to sit for the board exam. Contact the school office immediately with required documents and fees.</div>
+    </div>
+
+    <div class="notice-full">
+      <div class="notice-full-header">
+        <div class="notice-icon icon-gold">🎓</div>
+        <div><h4>Class 6 Admission 2026–27 – Open Now</h4><div class="meta"><span class="badge badge-gold">Admission</span> &nbsp; December 28, 2025 &nbsp;|&nbsp; By: Office</div></div>
+      </div>
+      <div class="notice-full-body">Admission for Class VI for academic year 2026–27 is now open. Limited seats available. Admission test will be held on February 10, 2026. Collect forms from school office. Visit the Admission page for details.</div>
+    </div>
+
+    <div class="notice-full">
+      <div class="notice-full-header">
+        <div class="notice-icon icon-green">🏆</div>
+        <div><h4>Annual Sports Day & Prize Giving 2026</h4><div class="meta"><span class="badge badge-green">Event</span> &nbsp; December 20, 2025 &nbsp;|&nbsp; By: Sports Committee</div></div>
+      </div>
+      <div class="notice-full-body">Annual Sports Day will be held on February 5, 2026. All students are required to participate. Prize giving ceremony will follow. Parents and guardians are cordially invited.</div>
+    </div>
+
+    <div class="notice-full">
+      <div class="notice-full-header">
+        <div class="notice-icon icon-blue">📊</div>
+        <div><h4>Half Yearly Examination Result Published</h4><div class="meta"><span class="badge badge-gold">Result</span> &nbsp; December 15, 2025 &nbsp;|&nbsp; By: Exam Committee</div></div>
+      </div>
+      <div class="notice-full-body">Half yearly examination results for all classes (VI–X) have been published. Students can collect their mark sheets from class teachers. Guardians are requested to check results and sign the mark sheet.</div>
+    </div>
+
+    <div class="notice-full">
+      <div class="notice-full-header">
+        <div class="notice-icon icon-red">🗓️</div>
+        <div><h4>Winter Holiday Notice 2025</h4><div class="meta"><span class="badge badge-red">Holiday</span> &nbsp; December 1, 2025 &nbsp;|&nbsp; By: Principal</div></div>
+      </div>
+      <div class="notice-full-body">Winter holidays will be observed from December 25, 2025 to January 5, 2026. School will reopen on January 6, 2026. Students must attend school regularly after the holiday period.</div>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="components.js"></script>
+</body>
+</html>
