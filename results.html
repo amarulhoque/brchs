@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Results – Brazendragonj Ram Chandra High School</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .result-search { background: var(--navy); border-radius: 8px; padding: 2.5rem; margin-bottom: 3rem; }
+    .result-search h3 { font-family: 'Libre Baskerville', serif; color: var(--white); font-size: 1.4rem; margin-bottom: 1.5rem; }
+    .search-row { display: grid; grid-template-columns: 1fr 1fr 1fr auto; gap: 1rem; align-items: end; }
+    .search-row select, .search-row input { width: 100%; padding: 0.75rem 1rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: var(--white); border-radius: 4px; font-family: 'Source Sans 3', sans-serif; font-size: 0.9rem; outline: none; }
+    .search-row select option { background: var(--navy-dark); }
+    .search-row label { display: block; font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-bottom: 0.4rem; letter-spacing: 1px; text-transform: uppercase; }
+    .search-btn { background: var(--gold); color: var(--navy-dark); border: none; padding: 0.75rem 2rem; border-radius: 4px; font-weight: 700; cursor: pointer; white-space: nowrap; transition: background 0.2s; }
+    .search-btn:hover { background: var(--gold-light); }
+    .result-card { background: var(--white); border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.07); overflow: hidden; margin-bottom: 1rem; display: none; }
+    .result-card.show { display: block; }
+    .result-card-header { background: var(--navy); color: var(--white); padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+    .result-card-header h4 { font-family: 'Libre Baskerville', serif; }
+    .gpa-badge { background: var(--gold); color: var(--navy-dark); padding: 0.3rem 1rem; border-radius: 50px; font-weight: 700; font-size: 0.9rem; }
+    .grade-A { color: var(--green); font-weight: 700; }
+    .grade-B { color: var(--gold); font-weight: 700; }
+    .grade-C { color: var(--red); font-weight: 700; }
+    .stat-pill { display: inline-block; background: rgba(26,107,60,0.1); color: var(--green); padding: 0.3rem 1rem; border-radius: 50px; font-size: 0.82rem; font-weight: 600; margin: 0.25rem; }
+    @media (max-width: 700px) { .search-row { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div id="site-header"></div>
+  <div class="page-hero">
+    <div class="breadcrumb"><a href="index.html">Home</a> › Results</div>
+    <h2>Examination Results</h2>
+    <p>Check your result by entering your Roll Number</p>
+  </div>
+
+  <div class="section">
+    <div class="result-search">
+      <h3>🔍 Search Your Result</h3>
+      <div class="search-row">
+        <div><label>Class</label><select id="selClass"><option>Class VI</option><option>Class VII</option><option>Class VIII</option><option>Class IX</option><option>Class X</option></select></div>
+        <div><label>Exam</label><select id="selExam"><option>Half Yearly 2025</option><option>Annual 2025</option><option>1st Term 2025</option></select></div>
+        <div><label>Roll Number</label><input type="text" id="rollInput" placeholder="Enter Roll No." /></div>
+        <div><label>&nbsp;</label><button class="search-btn" onclick="searchResult()">Search Result</button></div>
+      </div>
+    </div>
+
+    <!-- RESULT OUTPUT -->
+    <div class="result-card" id="resultCard">
+      <div class="result-card-header">
+        <div>
+          <h4 id="studentName">Md. Rakibul Islam</h4>
+          <div style="font-size:0.82rem; color:rgba(255,255,255,0.6); margin-top:0.2rem;">Roll: <span id="studentRoll">101</span> &nbsp;|&nbsp; Class VI &nbsp;|&nbsp; Half Yearly 2025</div>
+        </div>
+        <div class="gpa-badge" id="studentGPA">GPA 4.83</div>
+      </div>
+      <div style="padding:1.5rem;">
+        <div class="table-wrap">
+          <table>
+            <tr><th>Subject</th><th>Marks (100)</th><th>Grade</th><th>Points</th></tr>
+            <tr><td>Bangla</td><td>82</td><td class="grade-A">A</td><td>4.00</td></tr>
+            <tr><td>English</td><td>78</td><td class="grade-A">A</td><td>4.00</td></tr>
+            <tr><td>Mathematics</td><td>91</td><td class="grade-A">A+</td><td>5.00</td></tr>
+            <tr><td>Science</td><td>85</td><td class="grade-A">A+</td><td>5.00</td></tr>
+            <tr><td>Bangladesh & Global Studies</td><td>74</td><td class="grade-A">A</td><td>4.00</td></tr>
+            <tr><td>Islam Studies</td><td>80</td><td class="grade-A">A</td><td>4.00</td></tr>
+            <tr><td>ICT</td><td>88</td><td class="grade-A">A+</td><td>5.00</td></tr>
+          </table>
+        </div>
+        <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid var(--border); display:flex; gap:1rem; flex-wrap:wrap;">
+          <span class="stat-pill">Total Marks: 578/700</span>
+          <span class="stat-pill">GPA: 4.43</span>
+          <span class="stat-pill">Result: PASSED ✓</span>
+          <span class="stat-pill">Position: 5th in Class</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SSC BOARD RESULTS -->
+    <h2 class="section-title" style="margin-top:2rem;">SSC Board Results Summary</h2>
+    <div class="section-line"></div>
+    <div class="grid-3" style="margin-bottom:2rem;">
+      <div class="card" style="padding:1.5rem; text-align:center;">
+        <div style="font-family:'Libre Baskerville',serif; font-size:2.5rem; color:var(--green);">98%</div>
+        <div style="color:var(--gray); font-size:0.85rem;">SSC Pass Rate 2025</div>
+      </div>
+      <div class="card" style="padding:1.5rem; text-align:center;">
+        <div style="font-family:'Libre Baskerville',serif; font-size:2.5rem; color:var(--gold);">42</div>
+        <div style="color:var(--gray); font-size:0.85rem;">GPA-5 Achievers 2025</div>
+      </div>
+      <div class="card" style="padding:1.5rem; text-align:center;">
+        <div style="font-family:'Libre Baskerville',serif; font-size:2.5rem; color:var(--navy);">142</div>
+        <div style="color:var(--gray); font-size:0.85rem;">Total SSC Students 2025</div>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Year</th><th>Appeared</th><th>Passed</th><th>Pass Rate</th><th>GPA-5</th><th>Highest GPA</th></tr>
+        <tr><td>2025</td><td>142</td><td>139</td><td>98%</td><td>42</td><td>5.00</td></tr>
+        <tr><td>2024</td><td>138</td><td>133</td><td>96%</td><td>38</td><td>5.00</td></tr>
+        <tr><td>2023</td><td>130</td><td>124</td><td>95%</td><td>32</td><td>5.00</td></tr>
+        <tr><td>2022</td><td>128</td><td>120</td><td>94%</td><td>28</td><td>5.00</td></tr>
+        <tr><td>2021</td><td>125</td><td>116</td><td>93%</td><td>24</td><td>5.00</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="components.js"></script>
+  <script>
+    function searchResult() {
+      const roll = document.getElementById('rollInput').value.trim();
+      if (!roll) { alert('Please enter your Roll Number!'); return; }
+      document.getElementById('studentRoll').textContent = roll;
+      document.getElementById('resultCard').classList.add('show');
+      document.getElementById('resultCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
+</body>
+</html>
